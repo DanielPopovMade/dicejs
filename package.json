@@ -1,0 +1,29 @@
+{
+  "name": "@daniel-popov-made/dicejs",
+  "version": "1.0.0",
+  "description": "A virtual die with numbered sides or custom values",
+  "license": "MIT",
+  "author": "Daniel Popov",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": ["dist/index.js", "dist/index.d.ts"],
+  "keywords": ["dice", "die", "random"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && tsc -p test/tsconfig.json && node --test test/dice.test.js",
+    "prepack": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}
