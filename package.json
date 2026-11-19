@@ -2,29 +2,37 @@
   "name": "@daniel-popov-made/dicejs",
   "version": "1.0.0",
   "description": "A virtual die with numbered sides or custom values",
-  "license": "MIT",
-  "author": {
-    "name": "Daniel Popov",
-    "email":  "hi.danielpopov@gmail.com"
+  "keywords": [
+    "dice",
+    "die",
+    "random"
+  ],
+  "homepage": "https://github.com/DanielPopovMade/dicejs#readme",
+  "bugs": {
+    "url": "https://github.com/DanielPopovMade/dicejs/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/DanielPopovMade/dicejs.git"
+    "url": "git+https://github.com/DanielPopovMade/dicejs.git"
   },
+  "license": "MIT",
+  "author": "Daniel Popov <hi.danielpopov@gmail.com>",
   "type": "module",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     }
   },
-  "files": ["dist/index.js", "dist/index.d.ts"],
-  "keywords": ["dice", "die", "random"],
-  "publishConfig": {
-    "access": "public"
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "directories": {
+    "test": "test"
   },
+  "files": [
+    "dist/index.js",
+    "dist/index.d.ts"
+  ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "test": "npm run build && tsc -p test/tsconfig.json && node --test test/dice.test.js",
@@ -32,5 +40,8 @@
   },
   "devDependencies": {
     "typescript": "^7.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
